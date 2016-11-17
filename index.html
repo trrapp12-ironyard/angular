@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html ng-app="ourApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Angular Demo</title>
+    <script src="angular.min.js"></script>
+  </head>
+  <body>
+
+    <div class="if">
+      <h1>ng-if</h1>
+      <p ng-if="true">
+        Morning Class!
+      </p>
+      <p ng-if="false">
+        Good Morning Class!
+      </p>
+    </div>
+
+    <div class="modelAndInit">
+      <h1>ng-model and ng-init</h1>
+      <label>
+        <input type="checkbox" ng-model="checked" ng-init="checked=true" />
+        Is it good?
+      </label>
+      <br/>
+      <p>
+        <span ng-if="checked">
+          Good
+        </span>
+        Morning, Class.
+      </p>
+    </div>
+
+    <div class="n_g_bind">
+      <h2>ng-bind</h2>
+      <div ng-init="hour = 11">
+        <p>
+          The hour is: <span ng-bind="hour"></span>
+        </p>
+        <p>
+          The hour is still: {{hour}}
+        </p>
+        <p>Can also be used to evaluate.</p>
+        <p>2 + 2 = {{2+2}}</p>
+      </div>
+
+      <div class="quickAndDirty">
+        <p>Quick and dirty scope test shows that:</p>
+        <ul>
+          <li>the checkbox above is checked: {{checked}}</li>
+          <li>hour is {{hour}}</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div ng-controller="FirstCtrl">
+
+      <h3>$scope and Dependency Injection</h3>
+      <div>
+        The time now is: {{now}} <!-- $scope.now -->
+      </div>
+
+      <h3>ng-click</h3>
+      <div>
+        <button ng-click="updateTime()">Update the time above</button>
+      </div>
+
+    </div>
+
+    <div class="twoWayBinding">
+      <h2>2-way binding</h2>
+      <div ng-controller="BindingCtrl">
+        <p>
+          What's your name?
+        </p>
+        <input type="text" ng-model="userName">
+        <p>
+          Whuz up, {{userName}}?
+        </p>
+      </div>
+    </div>
+
+  <script src="app.js"></script>
+  </body>
+</html>

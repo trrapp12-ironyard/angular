@@ -3,11 +3,11 @@
 
 A classroom exercise practicing angular directives, scope, models, and controllers.
 
-- [x] Angular
-- [x] directives
-- [x] $scope
-- [x] models
-- [x] controllers
+- [x] ng-model
+- [x] ng-init
+- [x] ng-click
+- [x] ng-bind
+- [x] 2 way binding
 
 ###Project published at: 
 ---
